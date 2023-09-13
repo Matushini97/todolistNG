@@ -1,0 +1,19 @@
+<div class="todos-header">
+  <h1>Angular TODO</h1>
+</div>
+<div class="todos-input">
+  <input
+    type="text"
+    class="input"
+    placeholder="add new todolist"
+    [(ngModel)]="inputText"
+    (keyup.enter)="addTodoHandler()"
+  />
+  <button (click)="addTodoHandler()">add todo</button>
+</div>
+<todo-todo
+  *ngFor="let todo of todos$ | async"
+  [todo]="todo"
+  (removeTodoEvent)="removeTodoHandler($event)"
+  (editTodoEvent)="editTodoHandler($event)"
+></todo-todo>

@@ -20,7 +20,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "app",
+            "prefix": "todo",
             "style": "camelCase"
           }
         ],
@@ -28,7 +28,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "app",
+            "prefix": "todo",
             "style": "kebab-case"
           }
         ]
@@ -49,7 +49,7 @@
       "excludedFiles": ["*inline-template-*.component.html"],
       "extends": ["plugin:prettier/recommended"],
       "rules": {
-        "prettier/prettier": ["error", { "parser": "angular" }]
+        "prettier/prettier": ["error", { "parser": "angular", "endOfLine": "auto" }]
       }
     }
   ]
