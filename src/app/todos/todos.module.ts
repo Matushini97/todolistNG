@@ -8,5 +8,6 @@ import { FormsModule } from '@angular/forms'
 @NgModule({
   declarations: [TodosComponent, TodoComponent],
   imports: [CommonModule, TodosRoutingModule, FormsModule],
+  providers: [],
 })
 export class TodosModule {}

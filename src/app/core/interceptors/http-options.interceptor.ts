@@ -5,8 +5,6 @@ import { environment } from 'src/environments/environment.development'
 
 @Injectable()
 export class HttpOptionsInterceptor implements HttpInterceptor {
-  constructor() {}
-
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const modRequest = request.clone({
       headers: request.headers.set('api-key', environment.apiKey),

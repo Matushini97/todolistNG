@@ -6,6 +6,7 @@
       [(ngModel)]="newTitle"
       (blur)="editTitleHandler()"
       class="input"
+      todoAutofocus
     />
     <ng-template #content>
       <h3 (dblclick)="toggleEditMode()">{{ todo.title }}</h3>
