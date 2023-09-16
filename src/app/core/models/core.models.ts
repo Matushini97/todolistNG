@@ -4,3 +4,4 @@ export interface CommonResponse<T = object> {
   fieldsErrors: string[]
   resultCode: number
 }
+
