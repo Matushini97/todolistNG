@@ -11,9 +11,11 @@
   />
   <button (click)="addTodoHandler()">add todo</button>
 </div>
-<todo-todo
-  *ngFor="let todo of todos$ | async"
-  [todo]="todo"
-  (removeTodoEvent)="removeTodoHandler($event)"
-  (editTodoEvent)="editTodoHandler($event)"
-></todo-todo>
+<div class="todo-wrapper">
+  <todo-todo
+    *ngFor="let todo of todos$ | async"
+    [todo]="todo"
+    (removeTodoEvent)="removeTodoHandler($event)"
+    (editTodoEvent)="editTodoHandler($event)"
+  ></todo-todo>
+</div>

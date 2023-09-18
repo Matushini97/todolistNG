@@ -1,7 +1,26 @@
 <div class="task-wrapper">
-  <div class="task-title-wrapper">
-    <input type="checkbox" />
-    <p>{{ task?.title }}</p>
+  <div
+    [ngClass]="{
+      'task-title-wrapper': true,
+      'completed-task': task.status === taskStatusEnum.COMPLETED
+    }"
+  >
+    <input
+      type="checkbox"
+      (click)="changeTaskStatusHandler($event)"
+      [checked]="task.status === taskStatusEnum.COMPLETED"
+    />
+    <input
+      class="input"
+      *ngIf="editMode; else content"
+      type="text"
+      [(ngModel)]="newTitle"
+      (blur)="editTitleHandler()"
+      autofocus
+    />
+    <ng-template #content>
+      <p (dblclick)="activateEditModeHandler()">{{ task?.title }}</p>
+    </ng-template>
   </div>
   <button (click)="removeTaskHandler()">x</button>
 </div>
