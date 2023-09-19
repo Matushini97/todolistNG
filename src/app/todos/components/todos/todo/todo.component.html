@@ -14,6 +14,9 @@
     <button (click)="deleteListHandler()">X</button>
   </div>
   <todo-tasks [todoId]="todo.id"></todo-tasks>
-  <todo-todo-filters></todo-todo-filters>
+  <todo-todo-filters
+    (changeFilterEvent)="changeFilterHandler($event)"
+    [filter]="todo.filter"
+  ></todo-todo-filters>
   <todo-todo-date [addedDate]="todo.addedDate"></todo-todo-date>
 </div>

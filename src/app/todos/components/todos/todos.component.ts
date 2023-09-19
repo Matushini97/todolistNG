@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core'
 import { TodosService } from '../../services/todos.service'
 import { Observable } from 'rxjs'
-import { Todo } from '../../models/todos.modules'
+import { DomainTodo, Todo } from '../../models/todos.modules'
 
 @Component({
   selector: 'todo-todos',
@@ -9,7 +9,7 @@ import { Todo } from '../../models/todos.modules'
   styleUrls: ['./todos.component.scss'],
 })
 export class TodosComponent implements OnInit {
-  todos$?: Observable<Todo[]>
+  todos$?: Observable<DomainTodo[]>
   inputText = ''
 
   todosService = inject(TodosService)

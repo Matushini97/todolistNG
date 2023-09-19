@@ -1,5 +1,14 @@
 <div class="filter-wrapper">
-  <button>All</button>
-  <button>Active</button>
-  <button>Completed</button>
+  <button (click)="changeFilterHandler('all')" [ngClass]="{ highlight: filter === 'all' }">
+    All
+  </button>
+  <button (click)="changeFilterHandler('active')" [ngClass]="{ highlight: filter === 'active' }">
+    Active
+  </button>
+  <button
+    (click)="changeFilterHandler('completed')"
+    [ngClass]="{ highlight: filter === 'completed' }"
+  >
+    Completed
+  </button>
 </div>
