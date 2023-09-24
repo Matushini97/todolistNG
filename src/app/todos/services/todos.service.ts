@@ -75,6 +75,5 @@ export class TodosService {
       tl.id === data.todoId ? { ...tl, filter: data.filter } : tl
     )
     this.todos$.next(newTodos)
-    console.log('todos:', this.todos$.getValue())
   }
 }
