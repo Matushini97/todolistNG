@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core'
+import { Component, OnChanges, OnInit, SimpleChanges, inject } from '@angular/core'
 import { TodosService } from '../../services/todos.service'
 import { Observable } from 'rxjs'
 import { DomainTodo, Todo } from '../../models/todos.modules'
